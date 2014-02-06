@@ -1,0 +1,6 @@
+---
+Name: weboftalent-html-tagline
+---
+SiteConfig:
+  extensions:
+    ['HtmlTaglineSiteConfig']
