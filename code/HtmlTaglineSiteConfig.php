@@ -1,24 +1,23 @@
 <?php
 
-class HtmlTaglineSiteConfig extends DataExtension {
+class HtmlTaglineSiteConfig extends DataExtension
+{
+    public static $db = array(
+        'HTMLTagLine' => 'HTMLText',
+    );
 
+    public function updateCMSFields(FieldList $fields)
+    {
+        $fields->removeByName('Tagline');
+        $fields->addFieldToTab('Root.Main', $h1 = new HTMLEditorField('HTMLTagLine', _t('SiteConfig.SITETAGLINE', 'Site Tagline/Slogan')), 'Theme');
+        $h1->setRows(4);
+    }
 
-	static $db = array(
-		'HTMLTagLine' => 'HTMLText'
-	);
+    public function populateDefaults()
+    {
+        $this->HTMLTagLine = _t('SiteConfig.TAGLINEDEFAULT', '<p>your tagline here</p>');
 
-
-	function updateCMSFields(FieldList $fields){
-		$fields->removeByName('Tagline');
-		$fields->addFieldToTab("Root.Main", $h1=new HTMLEditorField('HTMLTagLine', _t('SiteConfig.SITETAGLINE', "Site Tagline/Slogan")),'Theme');	
-		$h1->setRows(4);
-	}
-
-	public function populateDefaults()
-	{
-		$this->HTMLTagLine = _t('SiteConfig.TAGLINEDEFAULT', "<p>your tagline here</p>");
-		
-		// Allow these defaults to be overridden
-		parent::populateDefaults();
-	}
+        // Allow these defaults to be overridden
+        parent::populateDefaults();
+    }
 }
