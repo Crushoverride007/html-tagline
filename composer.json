@@ -1,17 +1,22 @@
 {
-	"name": "weboftalent/html-tagline",
-	"description": "Enable an HTML tag line instead of a textual one",
-	"type": "silverstripe-module",
-	"keywords": ["silverstripe", "tagline","html","weboftalent"],
-	"authors": [
-		{
-			"name": "Gordon Anderson",
-			"email": "gordon.b.anderson@gmail.com",
-			"role": "Developer"
-		}
-	],
-	"require":
-	{
-		"silverstripe/framework": "~3.1"
-	}
+  "name": "weboftalent/html-tagline",
+  "description": "Enable an HTML tag line instead of a textual one",
+  "type": "silverstripe-module",
+  "keywords": [
+    "silverstripe",
+    "tagline",
+    "html",
+    "weboftalent"
+  ],
+  "authors": [
+    {
+      "name": "Gordon Anderson",
+      "email": "gordon.b.anderson@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "silverstripe/framework": "~3.1"
+  },
+  "license": "BSD-3-Clause"
 }
